@@ -33,6 +33,7 @@ if this_python < min_version:
     print("ERROR: " + " ".join(message_parts))
     sys.exit(1)
 
+## 이건 테스트 입니다.
 
 import os.path
 import pkgutil

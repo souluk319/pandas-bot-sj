@@ -121,3 +121,7 @@ with gr.Blocks() as demo:
               outputs=[output_markdown, output_image])
 
 demo.launch()
+
+## 참고:
+# - LangChain 공식 문서: https://python.langchain.com/en/latest/index.html
+# - Gradio 공식 문서: https://gradio.app/get_started
