@@ -16,7 +16,7 @@ spec:
     value: '{{ revision }}'
   # 빌드될 이미지 주소 (demo 네임스페이스 기준)
   - name: image_url
-    value: "image-registry.openshift-image-registry.svc:5000/demo/pandas-bot:latest"
+    value: "image-registry.openshift-image-registry.svc.cluster.local:5000/demo/pandas-bot:latest"
   pipelineSpec:
     params:
     - name: repo_url
