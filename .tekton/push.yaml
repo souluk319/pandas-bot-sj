@@ -49,15 +49,17 @@ spec:
         value: $(params.image_url)
       - name: TLSVERIFY
         value: "false" # 내부 레지스트리 사용 시 인증 무시
-      - name: PUSH_SECRET # 레지스트리 인증을 위한 시크릿 이름
-        value: "my-registry-secret" # 실제 시크릿 이름으로 변경
       workspaces:
       - name: source
         workspace: source
+      - name: dockerconfig # 도커 인증 정보가 담긴 워크스페이스
+        workspace: docker-config # 도커 인증 정보가 담긴 워크스페이스
   
     workspaces:
     - name: source
     - name: basic-auth
+    - name: docker-config # 도커 인증 정보 워크스페이스
+
   workspaces:
   - name: source
     volumeClaimTemplate:
@@ -69,3 +71,7 @@ spec:
   - name: basic-auth
     secret:
       secretName: '{{ git_auth_secret }}'
+  # [추가] 아까 만든 시크릿을 docker-config 워크스페이스에 연결
+  - name: docker-config
+    secret:
+      secretName: "my-registry-secret"
