@@ -16,7 +16,7 @@ spec:
     value: '{{ revision }}'
   # 빌드될 이미지 주소 (demo 네임스페이스 기준)
   - name: image_url
-    value: "image-registry.openshift-image-registry.svc:5000/demo/pandas-bot:latest"
+    value: "image-registry.openshift-image-registry.svc:5000/user3/pandas-bot-sj:latest"
   #  value: "registry.ocp.test.com:5000/demo/pandas-bot:latest"
   pipelineSpec:
     params:
@@ -78,3 +78,4 @@ spec:
   #     items:
   #       - key: .dockerconfigjson   # 시크릿 안에 들어있는 실제 키 이름
   #         path: config.json        # 컨테이너 안에서 보일 파일 이름
+  # 기도메타로 갑니다.
