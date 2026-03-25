@@ -26,7 +26,7 @@ spec:
     tasks:
     - name: fetch-repository
       params:
-      - name: url
+      - name: URL
         value: $(params.repo_url)
       - name: revision
         value: $(params.revision)
@@ -70,7 +70,7 @@ spec:
             storage: 1Gi
   - name: basic-auth
     secret:
-      secretName: "git-pandas-bot-sj-token-xlzjp"
+      secretName: "git-pandas-bot-git"
   # [추가] 아까 만든 시크릿을 docker-config 워크스페이스에 연결
   # - name: docker-config
   #   secret:
@@ -78,4 +78,4 @@ spec:
   #     items:
   #       - key: .dockerconfigjson   # 시크릿 안에 들어있는 실제 키 이름
   #         path: config.json        # 컨테이너 안에서 보일 파일 이름
-  # retry_22
+  # retry_23
