@@ -78,4 +78,4 @@ spec:
   #     items:
   #       - key: .dockerconfigjson   # 시크릿 안에 들어있는 실제 키 이름
   #         path: config.json        # 컨테이너 안에서 보일 파일 이름
-  # retry_40
+  # retry_41
