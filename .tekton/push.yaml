@@ -6,7 +6,7 @@ metadata:
     pipelinesascode.tekton.dev/on-event: "[push]"
     pipelinesascode.tekton.dev/on-target-branch: "[main]"
     # 사용할 태스크들을 명시합니다.
-    pipelinesascode.tekton.dev/task: "[git-clone, buildah]"
+    pipelinesascode.tekton.dev/task: "[buildah]"
   name: build-and-push
 spec:
   params:
@@ -32,6 +32,7 @@ spec:
         value: $(params.revision)
       taskRef:
         name: git-clone
+        kind: Task
       workspaces:
       - name: output
         workspace: source
@@ -78,4 +79,4 @@ spec:
   #     items:
   #       - key: .dockerconfigjson   # 시크릿 안에 들어있는 실제 키 이름
   #         path: config.json        # 컨테이너 안에서 보일 파일 이름
-  # retry_42
+  # retry_43
