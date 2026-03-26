@@ -70,7 +70,7 @@ spec:
             storage: 1Gi
   - name: basic-auth
     secret:
-      secretName: "git-pandas-bot-git"
+      secretName: "souluk319-pandas-bot-sj"
   # [추가] 아까 만든 시크릿을 docker-config 워크스페이스에 연결
   # - name: docker-config
   #   secret:
