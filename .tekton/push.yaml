@@ -11,9 +11,9 @@ metadata:
 spec:
   params:
   - name: repo_url
-    value: '{{ repo_url }}'
+    value: 'https://github.com/souluk319/pandas-bot-sj'
   - name: revision
-    value: '{{ revision }}'
+    value: 'main'
   # 빌드될 이미지 주소 (demo 네임스페이스 기준)
   - name: image_url
     value: "registry.ocp.test.com:5000/user3/pandas-bot-sj:latest"
@@ -70,7 +70,7 @@ spec:
             storage: 1Gi
   - name: basic-auth
     secret:
-      secretName: "souluk319-pandas-bot-sj"
+      secretName: "git-pandas-bot-git"
   # [추가] 아까 만든 시크릿을 docker-config 워크스페이스에 연결
   # - name: docker-config
   #   secret:
@@ -78,4 +78,4 @@ spec:
   #     items:
   #       - key: .dockerconfigjson   # 시크릿 안에 들어있는 실제 키 이름
   #         path: config.json        # 컨테이너 안에서 보일 파일 이름
-  # retry_39
+  # retry_40
