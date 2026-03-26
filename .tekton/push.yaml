@@ -28,7 +28,7 @@ spec:
     tasks:
     - name: fetch-repository
       params:
-      - name: url
+      - name: URL
         value: $(params.repo_url)
       - name: revision
         value: $(params.revision)
