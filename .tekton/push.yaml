@@ -47,7 +47,7 @@ spec:
       params:
       - name: IMAGE
         value: $(params.image_url)
-      - name: TLSVERIFY
+      - name: TLS_VERIFY
         value: "false" # 내부 레지스트리 사용 시 인증 무시
       workspaces:
       - name: source
@@ -78,4 +78,4 @@ spec:
   #     items:
   #       - key: .dockerconfigjson   # 시크릿 안에 들어있는 실제 키 이름
   #         path: config.json        # 컨테이너 안에서 보일 파일 이름
-  # retry_36
+  # retry_37
