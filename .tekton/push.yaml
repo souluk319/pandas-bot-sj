@@ -71,6 +71,7 @@ spec:
         resources:
           requests:
             storage: 1Gi
+        volumeMode: Filesystem
   - name: basic-auth
     secret:
       secretName: "git-pandas-bot-git"
@@ -81,4 +82,4 @@ spec:
   #     items:
   #       - key: .dockerconfigjson   # 시크릿 안에 들어있는 실제 키 이름
   #         path: config.json        # 컨테이너 안에서 보일 파일 이름
-  # retry_47
+  # retry_48
